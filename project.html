@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects</title>
+
+  <style>
+   * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", "sans-serif";
+      }
+
+      body {
+        background-color: #191919;
+      }
+
+      a {
+        color: #e1e0e0;
+        text-decoration: none;
+      }
+
+      .navbar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 25px 9%;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        z-index: 100;
+      }
+
+      .navbar .logo {
+        font-size: 30px;
+        font-weight: 700;
+        color: #c33232;
+      }
+
+      .navbar ul {
+        display: flex;
+      }
+
+      .navbar ul li {
+        list-style: none;
+        margin-left: 35px;
+      }
+      .navbar ul li a {
+        font-size: 20px;
+        font-weight: 500;
+        transition: 0.5s;
+      }
+      .navbar ul li:hover a,
+      .navbar ul li.active a {
+        color: rgb(203, 29, 29);
+      }
+
+    /* PROJECT SECTION */
+    .projects {
+      padding: 140px 9% 60px;
+      min-height: 100vh;
+    }
+
+    .projects h1 {
+      font-size: 45px;
+      margin-bottom: 40px;
+      text-align: center;
+      color: #c33232;
+    }
+
+    .project-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: #222;
+      border-radius: 15px;
+      padding: 25px;
+      border: 2px solid transparent;
+      transition: .4s;
+    }
+
+    .project-card:hover {
+      border: 2px solid #c33232;
+      transform: translateY(-10px);
+      box-shadow: 0 0 15px #c33232;
+    }
+
+    .project-card h3 {
+      color: #c33232;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    .project-card p {
+      color: #e1e0e0;
+      font-size: 14px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .project-card .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 20px;
+      border: 2px solid #c33232;
+      transition: .4s;
+      font-size: 14px;
+    }
+
+    .project-card .btn:hover {
+      background: #c33232;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">AGS</a>
+    <ul>
+        <li><a href="adrian_resume.html">Home</a></li>
+        <li><a href="aboutMe.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li  class="active"><a href="project.html">Projects</a></li>
+    </ul>
+  </nav>
+
+  <section class="projects">
+    <h1>My Projects</h1>
+
+    <div class="project-container">
+
+      <div class="project-card">
+        <h3>Realtime Chat App</h3>
+        <p>
+          Private messaging system using Socket.IO with authentication and rooms.
+          Built with React, Node.js, Express, and MySQL.
+        </p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <h3>JWT Authentication System</h3>
+        <p>
+          Secure login system using access tokens and refresh tokens with role-based
+          authorization and protected routes.
+        </p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>
+          Responsive personal portfolio showcasing skills, projects, and contact
+          form with modern UI design.
+        </p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

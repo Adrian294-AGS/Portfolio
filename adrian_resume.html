@@ -1,74 +1,183 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', 'sans-serif';
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", "sans-serif";
+      }
 
-        body {
-            background-color: rgb(83, 78, 73);
-        }
+      body {
+        background-color: #191919;
+      }
 
-        a {
-            color: white;
-            text-decoration: none;
-        }
+      a {
+        color: #e1e0e0;
+        text-decoration: none;
+      }
 
-        .navbar {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            padding: 25px 9%;
-            align-items: center;
-            justify-content: space-between;
-            display: flex;
-            z-index: 100;
-        }
+      .navbar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 25px 9%;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        z-index: 100;
+      }
 
-        .navbar .logo {
-            font-size: 30px;
-            font-weight: 700;
-        }
+      .navbar .logo {
+        box-shadow: 0 0 10px #c33232;
+        border-radius: 50%;
+        padding: 5px;
+        font-size: 30px;
+        font-weight: 700;
+        color: #c33232;
+      }
 
-        .navbar ul {
-            display: flex;
-        }
+      .navbar ul {
+        display: flex;
+      }
 
-        .navbar ul li {
-            list-style: none;
-            margin-left: 35px;
-        }
-        .navbar ul li a {
-            font-size: 20px;
-            font-weight: 500;
-            transition: .5s;
-        }
-        .navbar ul li:hover a,
-        .navbar ul li.active a{
-            color: rgb(95, 54, 54);
-        }
+      .navbar ul li {
+        list-style: none;
+        margin-left: 35px;
+      }
+      .navbar ul li a {
+        font-size: 20px;
+        font-weight: 500;
+        transition: 0.5s;
+      }
+      .navbar ul li:hover a,
+      .navbar ul li.active a {
+        color: rgb(203, 29, 29);
+      }
 
+      .home {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        padding: 60px 9% 0;
+        color: #e1e0e0;
+        gap: 60px;
+      }
+
+      strong {
+        color: #c33232;
+      }
+
+      .home-info h1 {
+        font-size: 50px;
+        font-weight: 700;
+      }
+      .home-info h2 {
+        font-size: 30px;
+        margin-top: -10px;
+      }
+
+      .home-info p {
+        font-size: 15px;
+        margin: 35px 0 50px;
+      }
+
+      .home-info .btn {
+        background-color: #c33232;
+        border: 2px solid #c33232;
+        box-shadow: 0 0 10px #c33232;
+        width: fit-content;
+        padding: 15px;
+        border-radius: 25px;
+        transition: .5s;
+      }
+
+      .home-info .btn a{
+        color: #e1e0e0;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .home-info .btn:hover {
+        background: transparent;
+        box-shadow: none;
+      }
+
+      .home-info .btn a:hover {
+        color: #c33232;
+      }
+
+      .home-img .img-box {
+        width: 32vw;
+        height: 32vw;
+        background: red;
+        border-radius: 50%;
+        padding: 5px;
+        border: 2px solid #c33232;
+        box-shadow: 0 0 10px #c33232;
+      }
+
+      .home-img .img-box .img-item {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: slategray;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .home-img .img-box .img-item img {
+        margin-top: 1px;
+        position: absolute;
+        display: block;
+        width: 200%;
+        object-fit: cover;
+      }
 
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="navbar">
-        <a href="#" class="logo">AGS</a>
-        <ul>
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#">Projects</a></li>
-        </ul>
+      <a href="#" class="logo">AGS</a>
+      <ul>
+        <li class="active"><a href="adrian_resume.html">Home</a></li>
+        <li><a href="aboutMe.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="project.html">Projects</a></li>
+      </ul>
     </nav>
-</body>
+    <section class="home">
+      <div class="home-info">
+        <h1>Adrian Santiago</h1>
+        <h2>I'm a Fullstack Developer / Penetration Tester</h2>
+        <hr>
+        <p>
+          I'm a passionate programmer who loves building modern web apps. I
+          specialize in <strong>React, Node.js, Express, and MySQL</strong>.
+          My focus is on creating clean, scalable, and efficient solutions. I
+          enjoy solving problems, learning new tools, and experimenting with
+          technologies.
+        </p>
+        <div class="btn">
+          <a href="#">More About Me</a>
+        </div>
+      </div>
+
+      <div class="home-img">
+        <div class="img-box">
+          <div class="img-item">
+            <img src="1331366.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
