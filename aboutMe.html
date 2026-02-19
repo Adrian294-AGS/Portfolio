@@ -69,7 +69,17 @@
       .navbar ul li:hover a,
       .navbar ul li.active a {
         color: #86c232;
-        text-shadow: 0 0 10px #86c232;
+        animation: glow-pulse-active 1s ease-in-out infinite alternate;
+      }
+
+      @keyframes glow-pulse-active {
+        0% {
+          text-shadow: 0 0 30px #a1f033;
+        }
+        100% {
+          text-shadow: 0 0 10px #86c232;
+          color: #fff;
+        }
       }
 
       .about {
@@ -87,13 +97,22 @@
         justify-content: center;
       }
 
+      @keyframes glow-pulse-box {
+        0% {
+          box-shadow: 0 0 30px #86c232;
+        }
+        100% {
+          box-shadow: 0 0 10px #474b4f;
+        }
+      }
+
       .img-box {
         width: 32vw;
         height: 32vw;
         border-radius: 50%;
         padding: 5px;
         border: 2px solid #61892f;
-        box-shadow: 0 0 15px #86c232;
+        animation: glow-pulse-box 1.0s ease-in-out infinite alternate;
       }
 
       .img-item {
@@ -116,11 +135,22 @@
         flex: 1 1 400px;
       }
 
+      @keyframes glow-pulse-h1 {
+        0% {
+          text-shadow: 0 0 30px #86c232;
+          color: #86c232;
+        }
+        100% {
+          text-shadow: 0 0 10px #474b4f;
+        }
+      }
+
       .about-info h1 {
         font-size: 45px;
         margin-bottom: 10px;
         color: #fff;
         animation: slide-in 0.5s forwards;
+        animation: glow-pulse-h1 1.0s ease-in-out infinite alternate;
       }
 
       @keyframes slide-in {
@@ -156,14 +186,14 @@
         background: #222;
         padding: 20px;
         border-radius: 10px;
-        border: 1px solid #333;
+        border: 2px solid #61892f;
         transition: 0.5s;
       }
 
       .info-box:hover {
         border: 1px solid #86c232;
-        box-shadow: 0 0 10px #86c232;
         transform: translate(-5px, -5px);
+        animation: glow-pulse-box 1.0s ease-in-out infinite alternate;
       }
 
       .info-box strong {

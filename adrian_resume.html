@@ -68,7 +68,17 @@
       .navbar ul li:hover a,
       .navbar ul li.active a {
         color: #86c232;
-        text-shadow: 0 0 10px #86c232;
+        animation: glow-pulse-active 1s ease-in-out infinite alternate;
+      }
+
+      @keyframes glow-pulse-active {
+        0% {
+          text-shadow: 0 0 30px #a1f033;
+        }
+        100% {
+          text-shadow: 0 0 10px #86c232;
+          color: #fff;
+        }
       }
 
       .home {
@@ -84,11 +94,21 @@
         color: #86c232;
       }
 
+      @keyframes glow-pulse {
+        0% {
+          text-shadow: 0 0 30px #a1f033;
+          color: #ceeba7;
+        }
+        100% {
+          text-shadow: 0 0 10px #86c232;
+        }
+      }
+
       .home-info h1 {
         font-size: 45px;
         font-weight: 700;
         transition: 0.5s;
-      
+        animation: glow-pulse 1s ease-in-out infinite alternate;
       }
 
       @keyframes slide-in {
@@ -118,6 +138,16 @@
         animation: slide-in 0.5s forwards;
       }
 
+      @keyframes btn-glow {
+        0%{
+          box-shadow: 0 0 30px #86c232;
+        }
+        100%{
+          box-shadow: 0 0 10px #61892f;
+        }
+        
+      }
+
       .home-info .btn {
         background-color: #86c232;
         border: 2px solid #86c232;
@@ -125,7 +155,7 @@
         width: fit-content;
         padding: 15px;
         border-radius: 25px;
-        transition: 0.5s;
+        transition: 0.5s;   
         animation: slide-in 0.5s forwards;
       }
 
@@ -149,6 +179,15 @@
         animation: slide-in 0.5s forwards;
       }
 
+      @keyframes glow-pulse-box {
+        0% {
+          box-shadow: 0 0 30px #86c232;
+        }
+        100% {
+          box-shadow: 0 0 10px #6b6e70;
+        }
+      }
+
       .home-img .img-box {
         width: 32vw;
         height: 32vw;
@@ -157,6 +196,7 @@
         padding: 5px;
         border: 2px solid #61892f;
         box-shadow: 0 0 10px #61892f;
+        animation: glow-pulse-box 1s ease-in-out infinite alternate;
       }
 
       .home-img .img-box .img-item {
@@ -196,7 +236,7 @@
         <hr />
         <p>
           I'm a passionate programmer who loves building modern web apps. I
-          specialize in <strong>React, Node.js, Express, and MySQL</strong>. My
+          specialize in <strong>React, Node.js, Express, redis, mongoDb, MySQL</strong>. My
           focus is on creating clean, scalable, and efficient solutions. I enjoy
           solving problems, learning new tools, and experimenting with
           technologies.

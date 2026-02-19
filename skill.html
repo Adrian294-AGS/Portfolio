@@ -1,227 +1,233 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Skills</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills</title>
 
-  <style>
-  * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", "sans-serif";
-    }
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", "sans-serif";
+      }
 
-    body {
-      background-color: #222622;
-    }
+      body {
+        background-color: #222622;
+      }
 
-    a {
-      color: white;
-      text-decoration: none;
-    }
+      a {
+        color: white;
+        text-decoration: none;
+      }
 
-    .navbar {
-      position: fixed;
-      left: 0;
-      top: 0;
-      width: 100%;
-      padding: 25px 9%;
-      align-items: center;
-      justify-content: space-between;
-      display: flex;
-      z-index: 100;
-    }
+      .navbar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 25px 9%;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        z-index: 100;
+      }
 
-    .navbar .logo {
-      box-shadow: 0 0 10px #86c232;
-      border-radius: 50%;
-      padding: 5px;
-      font-size: 30px;
-      font-weight: 700;
-      color: #86c232;
-    }
+      .navbar .logo {
+        box-shadow: 0 0 10px #86c232;
+        border-radius: 50%;
+        padding: 5px;
+        font-size: 30px;
+        font-weight: 700;
+        color: #86c232;
+      }
 
-    .navbar ul {
-      display: flex;
-    }
+      .navbar ul {
+        display: flex;
+      }
 
-    .navbar ul li {
-      list-style: none;
-      margin-left: 35px;
-    }
+      .navbar ul li {
+        list-style: none;
+        margin-left: 35px;
+      }
 
-    .navbar ul li a {
-      font-size: 20px;
-      font-weight: 500;
-      transition: 0.5s;
-    }
+      .navbar ul li a {
+        font-size: 20px;
+        font-weight: 500;
+        transition: 0.5s;
+      }
 
-    .navbar ul li:hover a,
-    .navbar ul li.active a {
-      color: #86c232;
-      text-shadow: 0 0 10px #86c232;
-    }
-    .skills {
-      padding: 140px 9% 60px;
-      min-height: 100vh;
-    }
+      .navbar ul li:hover a,
+      .navbar ul li.active a {
+        color: #86c232;
+        animation: glow-pulse-active 1s ease-in-out infinite alternate;
+      }
 
-    .skills h1 {
-      font-size: 45px;
-      text-align: center;
-      margin-bottom: 50px;
-    }
+      @keyframes glow-pulse-active {
+        0% {
+          text-shadow: 0 0 30px #a1f033;
+        }
+        100% {
+          text-shadow: 0 0 10px #86c232;
+          color: #fff;
+        }
+      }
 
-    .skills-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-    }
+      .skills {
+        padding: 140px 9% 60px;
+        min-height: 100vh;
+      }
 
-    .skill-card {
-      background: #222;
-      padding: 25px;
-      border-radius: 15px;
-      transition: .4s;
-      border: 2px solid transparent;
-    }
+      .skills h1 {
+        font-size: 45px;
+        text-align: center;
+        margin-bottom: 50px;
+      }
 
-    .skill-card:hover {
-      border: 2px solid #c33232;
-      transform: translateY(-10px);
-      box-shadow: 0 0 15px #c33232;
-    }
+      .skills-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+      }
 
-    .skill-card h3 {
-      color: #c33232;
-      margin-bottom: 20px;
-      font-size: 22px;
-    }
+      .skill-card {
+        background: #222;
+        padding: 25px;
+        border-radius: 15px;
+        transition: 0.4s;
+        border: 2px solid transparent;
+      }
 
-    .skill {
-      margin-bottom: 15px;
-    }
+      .skill-card:hover {
+        border: 2px solid #c33232;
+        transform: translateY(-10px);
+        box-shadow: 0 0 15px #c33232;
+      }
 
-    .skill span {
-      font-size: 14px;
-      display: block;
-      margin-bottom: 5px;
-    }
+      .skill-card h3 {
+        color: #c33232;
+        margin-bottom: 20px;
+        font-size: 22px;
+      }
 
-    .progress-bar {
-      width: 100%;
-      height: 8px;
-      background: #333;
-      border-radius: 10px;
-      overflow: hidden;
-    }
+      .skill {
+        margin-bottom: 15px;
+      }
 
-    .progress {
-      height: 100%;
-      background: #c33232;
-    }
+      .skill span {
+        font-size: 14px;
+        display: block;
+        margin-bottom: 5px;
+      }
 
-  </style>
-</head>
+      .progress-bar {
+        width: 100%;
+        height: 8px;
+        background: #333;
+        border-radius: 10px;
+        overflow: hidden;
+      }
 
-<body>
+      .progress {
+        height: 100%;
+        background: #c33232;
+      }
+    </style>
+  </head>
 
-  <nav class="navbar">
-    <a href="index.html" class="logo">AGS</a>
-    <ul>
-      <li><a href="adrian_resume.html">Home</a></li>
-      <li><a href="aboutMe.html">About</a></li>
-      <li class="active"><a href="#">Skills</a></li>
-      <li><a href="project.html">Projects</a></li>
-    </ul>
-  </nav>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="logo">AGS</a>
+      <ul>
+        <li><a href="adrian_resume.html">Home</a></li>
+        <li><a href="aboutMe.html">About</a></li>
+        <li class="active"><a href="#">Skills</a></li>
+        <li><a href="project.html">Projects</a></li>
+      </ul>
+    </nav>
 
-  <section class="skills">
-    <h1>My Skills</h1>
+    <section class="skills">
+      <h1>My Skills</h1>
 
-    <div class="skills-container">
+      <div class="skills-container">
+        <div class="skill-card">
+          <h3>Frontend Development</h3>
 
-      <div class="skill-card">
-        <h3>Frontend Development</h3>
+          <div class="skill">
+            <span>HTML & CSS</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 90%"></div>
+            </div>
+          </div>
 
-        <div class="skill">
-          <span>HTML & CSS</span>
-          <div class="progress-bar">
-            <div class="progress" style="width: 90%"></div>
+          <div class="skill">
+            <span>JavaScript</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 85%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span>React</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%"></div>
+            </div>
           </div>
         </div>
 
-        <div class="skill">
-          <span>JavaScript</span>
-          <div class="progress-bar">
-            <div class="progress" style="width: 85%"></div>
+        <!-- BACKEND -->
+        <div class="skill-card">
+          <h3>Backend Development</h3>
+
+          <div class="skill">
+            <span>Node.js</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 85%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span>Express.js</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 85%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span>MySQL</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 75%"></div>
+            </div>
           </div>
         </div>
 
-        <div class="skill">
-          <span>React</span>
-          <div class="progress-bar">
-            <div class="progress" style="width: 80%"></div>
+        <!-- SECURITY -->
+        <div class="skill-card">
+          <h3>Cybersecurity</h3>
+
+          <div class="skill">
+            <span>Penetration Testing</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 70%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span>Kali Linux Tools</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 75%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span>JWT Authentication</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%"></div>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- BACKEND -->
-      <div class="skill-card">
-        <h3>Backend Development</h3>
-
-        <div class="skill">
-          <span>Node.js</span>
-          <div class="progress-bar">
-            <div class="progress" style="width: 85%"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <span>Express.js</span>
-          <div class="progress-bar">
-            <div class="progress" style="width: 85%"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <span>MySQL</span>
-          <div class="progress-bar">
-            <div class="progress" style="width: 75%"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECURITY -->
-      <div class="skill-card">
-        <h3>Cybersecurity</h3>
-
-        <div class="skill">
-          <span>Penetration Testing</span>
-          <div class="progress-bar">
-            <div class="progress" style="width: 70%"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <span>Kali Linux Tools</span>
-          <div class="progress-bar">
-            <div class="progress" style="width: 75%"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <span>JWT Authentication</span>
-          <div class="progress-bar">
-            <div class="progress" style="width: 80%"></div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-</body>
+    </section>
+  </body>
 </html>
