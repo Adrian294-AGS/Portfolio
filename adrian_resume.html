@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      color {
+        color: #61892f;
+        color: #86c232;
+        color: #222629;
+        color: #474b4f;
+        color: #6b6e70;
+      }
+
       * {
         margin: 0;
         padding: 0;
@@ -13,11 +21,11 @@
       }
 
       body {
-        background-color: #191919;
+        background-color: #222622;
       }
 
       a {
-        color: #e1e0e0;
+        color: white;
         text-decoration: none;
       }
 
@@ -34,12 +42,12 @@
       }
 
       .navbar .logo {
-        box-shadow: 0 0 10px #c33232;
+        box-shadow: 0 0 10px #86c232;
         border-radius: 50%;
         padding: 5px;
         font-size: 30px;
         font-weight: 700;
-        color: #c33232;
+        color: #86c232;
       }
 
       .navbar ul {
@@ -50,14 +58,17 @@
         list-style: none;
         margin-left: 35px;
       }
+
       .navbar ul li a {
         font-size: 20px;
         font-weight: 500;
         transition: 0.5s;
       }
+
       .navbar ul li:hover a,
       .navbar ul li.active a {
-        color: rgb(203, 29, 29);
+        color: #86c232;
+        text-shadow: 0 0 10px #86c232;
       }
 
       .home {
@@ -65,40 +76,61 @@
         align-items: center;
         height: 100vh;
         padding: 60px 9% 0;
-        color: #e1e0e0;
+        color: #fff;
         gap: 60px;
       }
 
       strong {
-        color: #c33232;
+        color: #86c232;
       }
 
       .home-info h1 {
-        font-size: 50px;
+        font-size: 45px;
         font-weight: 700;
+        transition: 0.5s;
+      
       }
+
+      @keyframes slide-in {
+        from {
+          transform: translateX(-150%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+
+      .home-info h1:hover {
+        text-shadow: 0 0 10px #86c232;
+        transform: translate(-5px, -5px);
+      }
+
       .home-info h2 {
-        font-size: 30px;
-        margin-top: -10px;
+        font-size: 25px;
+        margin-top: -5px;
+        color: #86c232;
+        animation: slide-in 0.5s forwards;
       }
 
       .home-info p {
-        font-size: 15px;
+        font-size: 20px;
         margin: 35px 0 50px;
+        animation: slide-in 0.5s forwards;
       }
 
       .home-info .btn {
-        background-color: #c33232;
-        border: 2px solid #c33232;
-        box-shadow: 0 0 10px #c33232;
+        background-color: #86c232;
+        border: 2px solid #86c232;
+        box-shadow: 0 0 10px #86c232;
         width: fit-content;
         padding: 15px;
         border-radius: 25px;
-        transition: .5s;
+        transition: 0.5s;
+        animation: slide-in 0.5s forwards;
       }
 
-      .home-info .btn a{
-        color: #e1e0e0;
+      .home-info .btn a {
+        color: #fff;
         font-size: 20px;
         font-weight: 700;
       }
@@ -109,17 +141,22 @@
       }
 
       .home-info .btn a:hover {
-        color: #c33232;
+        text-shadow: 0 0 10px #86c232;
+        color: #86c232;
+      }
+
+      hr {
+        animation: slide-in 0.5s forwards;
       }
 
       .home-img .img-box {
         width: 32vw;
         height: 32vw;
-        background: red;
+        background: #86c232;
         border-radius: 50%;
         padding: 5px;
-        border: 2px solid #c33232;
-        box-shadow: 0 0 10px #c33232;
+        border: 2px solid #61892f;
+        box-shadow: 0 0 10px #61892f;
       }
 
       .home-img .img-box .img-item {
@@ -140,7 +177,6 @@
         width: 200%;
         object-fit: cover;
       }
-
     </style>
   </head>
   <body>
@@ -149,8 +185,7 @@
       <ul>
         <li class="active"><a href="adrian_resume.html">Home</a></li>
         <li><a href="aboutMe.html">About</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="skill.html">Skills</a></li>
         <li><a href="project.html">Projects</a></li>
       </ul>
     </nav>
@@ -158,12 +193,12 @@
       <div class="home-info">
         <h1>Adrian Santiago</h1>
         <h2>I'm a Fullstack Developer / Penetration Tester</h2>
-        <hr>
+        <hr />
         <p>
           I'm a passionate programmer who loves building modern web apps. I
-          specialize in <strong>React, Node.js, Express, and MySQL</strong>.
-          My focus is on creating clean, scalable, and efficient solutions. I
-          enjoy solving problems, learning new tools, and experimenting with
+          specialize in <strong>React, Node.js, Express, and MySQL</strong>. My
+          focus is on creating clean, scalable, and efficient solutions. I enjoy
+          solving problems, learning new tools, and experimenting with
           technologies.
         </p>
         <div class="btn">
@@ -174,7 +209,7 @@
       <div class="home-img">
         <div class="img-box">
           <div class="img-item">
-            <img src="1331366.png" alt="">
+            <img src="1331366.png" alt="" />
           </div>
         </div>
       </div>
