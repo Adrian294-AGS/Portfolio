@@ -87,8 +87,10 @@
             0 0 20px #79ac31,
             0 0 30px #86c232;
           color: #ceeba7;
+          transform: translateY(-10px);
         }
         100% {
+          transform: translateY(-5px);
           text-shadow: 0 0 10px #474b4f;
           color: #fff;
         }
@@ -143,6 +145,15 @@
         line-height: 1.6;
       }
 
+      @keyframes btn-float {
+          0% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(-5px);
+        }
+      }
+
       .project-card .btn {
         display: inline-block;
         padding: 10px 18px;
@@ -150,6 +161,7 @@
         border: 2px solid #86c232;
         transition: 0.5s;
         font-size: 14px;
+        animation: btn-float 1.0s ease-in-out infinite alternate;
       }
 
       @keyframes btn-glow {
@@ -163,7 +175,7 @@
 
       .project-card .btn:hover {
         background: #86c232;
-        animation: btn-glow 1s ease-in-out infinite alternate;
+        animation: btn-glow 1.0s ease-in-out infinite alternate;
       }
     </style>
   </head>
@@ -214,7 +226,7 @@
             Responsive personal portfolio showcasing skills, projects, and
             contact form with modern UI design.
           </p>
-          <a href="#" class="btn">View Project</a>
+          <a href="https://github.com/Adrian294-AGS/Portfolio" class="btn">View Project</a>
         </div>
       </div>
     </section>

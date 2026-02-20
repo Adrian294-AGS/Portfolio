@@ -108,15 +108,15 @@
       .home-info h1 {
         font-size: 45px;
         font-weight: 700;
-        transition: 0.5s;
-        animation: glow-pulse 1s ease-in-out infinite alternate;
+        transition: 1.5s;
+        animation: glow-pulse 1.0s ease-in-out infinite alternate;
       }
 
       @keyframes slide-in {
-        from {
+        0% {
           transform: translateX(-150%);
         }
-        to {
+        100% {
           transform: translateX(0);
         }
       }
@@ -137,16 +137,6 @@
         font-size: 20px;
         margin: 35px 0 50px;
         animation: slide-in 0.5s forwards;
-      }
-
-      @keyframes btn-glow {
-        0%{
-          box-shadow: 0 0 30px #86c232;
-        }
-        100%{
-          box-shadow: 0 0 10px #61892f;
-        }
-        
       }
 
       .home-info .btn {
@@ -183,6 +173,7 @@
       @keyframes glow-pulse-box {
         0% {
           box-shadow: 0 0 30px #86c232;
+          transform: translateY(-15px);
         }
         100% {
           box-shadow: 0 0 10px #6b6e70;
@@ -244,7 +235,7 @@
           technologies.
         </p>
         <div class="btn">
-          <a href="#">More About Me</a>
+          <a href="aboutMe.html">More About Me</a>
         </div>
       </div>
 
