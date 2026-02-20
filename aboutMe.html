@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Me</title>
-
+    <link rel="icon" href="logo.png">
     <style>
       color {
         color: #61892f;
@@ -137,8 +137,11 @@
 
       @keyframes glow-pulse-h1 {
         0% {
-          text-shadow: 0 0 30px #86c232;
-          color: #86c232;
+          text-shadow:
+            0 0 10px #86c232,
+            0 0 20px #79ac31,
+            0 0 30px #86c232;
+          color:  #ceeba7;
         }
         100% {
           text-shadow: 0 0 10px #474b4f;
@@ -186,13 +189,13 @@
         background: #222;
         padding: 20px;
         border-radius: 10px;
-        border: 2px solid #61892f;
+        border: 2px solid transparent;
         transition: 0.5s;
       }
 
       .info-box:hover {
         border: 1px solid #86c232;
-        transform: translate(-5px, -5px);
+        transform: translateY(-10px);
         animation: glow-pulse-box 1.0s ease-in-out infinite alternate;
       }
 
@@ -226,10 +229,11 @@
     <nav class="navbar">
       <a href="index.html" class="logo">AGS</a>
       <ul>
-        <li><a href="adrian_resume.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li class="active"><a href="#">About</a></li>
         <li><a href="skill.html">Skills</a></li>
         <li><a href="project.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
