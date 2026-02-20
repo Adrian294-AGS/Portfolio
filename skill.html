@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Skills</title>
-    <link rel="icon" href="logo.png">
+    <link rel="icon" href="logo.png" />
 
     <style>
       * {
@@ -112,11 +112,11 @@
         padding: 25px;
         color: #fff;
         border-radius: 15px;
-        transition: .5s;
+        transition: 0.5s;
         border: 2px solid transparent;
       }
 
-       @keyframes glow-pulse-box {
+      @keyframes glow-pulse-box {
         0% {
           box-shadow: 0 0 30px #86c232;
           border: 2px solid #86c232;
@@ -126,10 +126,9 @@
         }
       }
 
-
       .skill-card:hover {
         transform: translateY(-10px);
-        animation: glow-pulse-box 1.0s ease-in-out infinite alternate;
+        animation: glow-pulse-box 1s ease-in-out infinite alternate;
       }
 
       .skill-card h3 {
@@ -158,9 +157,8 @@
 
       .progress {
         height: 100%;
-        background: #474b4f
+        background: #474b4f;
       }
-
     </style>
   </head>
 
@@ -186,7 +184,7 @@
           <div class="skill">
             <span>HTML & CSS</span>
             <div class="progress-bar">
-              <div class="progress" style="width: 50%;"></div>
+              <div class="progress" style="width: 50%"></div>
             </div>
           </div>
 
@@ -205,7 +203,6 @@
           </div>
         </div>
 
-        <!-- BACKEND -->
         <div class="skill-card">
           <h3>Backend Development</h3>
 
@@ -229,9 +226,22 @@
               <div class="progress" style="width: 75%"></div>
             </div>
           </div>
+
+          <div class="skill">
+            <span>MongoDb</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 70%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <span>Redis</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 75%"></div>
+            </div>
+          </div>
         </div>
 
-        <!-- SECURITY -->
         <div class="skill-card">
           <h3>Cybersecurity</h3>
 
