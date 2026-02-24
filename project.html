@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="logo.png">
+    <link rel="icon" href="logo.png" />
     <title>Projects</title>
 
     <style>
@@ -146,7 +146,7 @@
       }
 
       @keyframes btn-float {
-          0% {
+        0% {
           transform: translateY(-10px);
         }
         100% {
@@ -161,7 +161,7 @@
         border: 2px solid #86c232;
         transition: 0.5s;
         font-size: 14px;
-        animation: btn-float 1.0s ease-in-out infinite alternate;
+        animation: btn-float 1s ease-in-out infinite alternate;
       }
 
       @keyframes btn-glow {
@@ -175,7 +175,7 @@
 
       .project-card .btn:hover {
         background: #86c232;
-        animation: btn-glow 1.0s ease-in-out infinite alternate;
+        animation: btn-glow 1s ease-in-out infinite alternate;
       }
     </style>
   </head>
@@ -197,10 +197,17 @@
 
       <div class="project-container">
         <div class="project-card">
-          <h3>Realtime Chat App</h3>
+          <h3>AGS-speakNote-app</h3>
           <p>
-            Private messaging system using Socket.IO with authentication and
-            rooms. Built with React, Node.js, Express, and MySQL.
+            AGS-SpeakNotes is a smart note-taking app that listens, understands,
+            and organizes your thoughts - literally. It allows users to record
+            short voice notes, which are then transcribed into text and
+            automatically structured into clean, readable, and organized written
+            notes. Instead of writing things down manually, you can just speak
+            your mind, and the app will do the heavy lifting - analyzing what
+            you said, identifying the key ideas, and formatting them into
+            categories, labels, or summaries. Think of it as your personal voice
+            assistant for note-taking, but smarter and more natural.
           </p>
           <a
             href="https://github.com/Adrian294-AGS/AGS-speakNote-app"
@@ -217,7 +224,12 @@
             database operations such as SELECT, INSERT, UPDATE, DELETE, and JOIN
             queries.
           </p>
-          <a href="https://github.com/Adrian294-AGS/AGS-SQL-Template" target="_blank" class="btn">View Project</a>
+          <a
+            href="https://www.npmjs.com/package/ags-sql-gen"
+            target="_blank"
+            class="btn"
+            >View Project</a
+          >
         </div>
 
         <div class="project-card">
@@ -226,7 +238,9 @@
             Responsive personal portfolio showcasing skills, projects, and
             contact form with modern UI design.
           </p>
-          <a href="https://github.com/Adrian294-AGS/Portfolio" class="btn">View Project</a>
+          <a href="https://github.com/Adrian294-AGS/Portfolio" class="btn"
+            >View Project</a
+          >
         </div>
       </div>
     </section>
