@@ -119,6 +119,75 @@
         }
       }
 
+      .projectSample {
+        margin-top: 80px;
+        padding: 60px 40px;
+        background-color: #474b4f;
+
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        width: 100vw;
+
+        display: flex;
+        gap: 30px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+      }
+
+      .projectSample::-webkit-scrollbar {
+        height: 10px;
+      }
+      .projectSample::-webkit-scrollbar-thumb {
+        background: #86c232;
+        border-radius: 10px;
+      }
+
+      .projectSample-card {
+        flex: 0 0 700px;
+        background: #222;
+        border-radius: 15px;
+        padding: 25px;
+        border: 2px solid transparent;
+        text-align: center;
+        transition: 0.5s;
+      }
+
+      .projectSample {
+        scroll-snap-type: x mandatory;
+      }
+
+      .projectSample-card {
+        scroll-snap-align: center;
+      }
+
+      .project-card-video {
+        width: 100%;
+        max-width: 1000px;
+        border-radius: 10px;
+      }
+
+      .projectSample-card:hover {
+        transform: translateY(-10px);
+        animation: glow-pulse-box 1s ease-in-out infinite alternate;
+      }
+
+      .projectSamle h3 {
+        color: #86c232;
+        margin-bottom: 15px;
+        font-size: 22px;
+      }
+
+      .projectSample-card p {
+        color: #e1e0e0;
+        font-size: 16px;
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+
       .project-card {
         background: #222;
         border-radius: 15px;
@@ -241,6 +310,49 @@
           <a href="https://github.com/Adrian294-AGS/Portfolio" class="btn"
             >View Project</a
           >
+        </div>
+      </div>
+      <div class="projectSample">
+        <div class="videoH1">
+        </div>
+        <div class="projectSample-card">
+          <h3 style="color: #86c232; margin-bottom: 15px; font-size: 22px">
+            Portfolio Website
+          </h3>
+
+          <video
+            class="project-card-video"
+            src="projectVideo.mp4"
+            controls
+            autoplay
+            muted
+          ></video>
+        </div>
+        <div class="projectSample-card">
+          <h3 style="color: #86c232; margin-bottom: 15px; font-size: 22px">
+            Portfolio Website
+          </h3>
+
+          <video
+            class="project-card-video"
+            src="projectVideo.mp4"
+            controls
+            autoplay
+            muted
+          ></video>
+        </div>
+        <div class="projectSample-card">
+          <h3 style="color: #86c232; margin-bottom: 15px; font-size: 22px">
+            Portfolio Website
+          </h3>
+
+          <video
+            class="project-card-video"
+            src="projectVideo.mp4"
+            controls
+            autoplay
+            muted
+          ></video>
         </div>
       </div>
     </section>
